@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Asegura que el body ocupe el 100% del viewport height */
+    overflow: hidden; /* Evita el scroll en el body */
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Ajusta el color y la opacidad aquí */
+    z-index: 0;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Asegura que el contenedor ocupe el 100% del viewport width */
+    height: 100vh; /* Asegura que el contenedor ocupe el 100% del viewport height */
+    background-image: url('source/fondo1.jpg');
+    background-size: cover; /* Estira la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija la imagen al hacer scroll */
+    background-repeat: no-repeat; /* No repite la imagen */
+    z-index: -1; /* Asegura que esta capa esté detrás del contenido */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima de la imagen de fondo */
+    overflow: auto; /* Permite el scroll en el contenido */
+    height: 100vh; /* Asegura que el contenido ocupe el 100% del viewport height */
+}
+.c-div-nav{
+    position: sticky;
+}
+.c-div-nav ul{
+    list-style-type: none;
+    margin-top: 15px;
+    display: flex;
+    justify-content: end;
+    background-color: rgb(255, 255, 255, 0.2);
+}
+.c-div-nav ul li{
+    margin-right: 25px;
+    padding-top: 15px;    
+    padding-bottom: 15px;
+}
+.c-div-nav ul li a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large ;
+    color: rgb(128, 255, 0);
+    transition: color 0.3s linear;    
+}
+.c-div-nav ul li a:hover{
+    color: rgb(217, 255, 0);
+}
+.c-welcome{
+    color: rgb(128,255,0);
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    font-family:  sans-serif ;
+    text-align: center;
+    font-size: xx-large;
+}
+.c-welcome h1{
+    font-size: 80pt;
+    margin: auto;
+}
+.c-welcome h2{
+    margin-bottom: 10px;
+}
+.c-welcome h3{
+    margin-top: 10px;
+}
+main{
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    width: 80%;
+}
+.c-section{
+    justify-content: center;
+    color: rgb(128,255,0);
+}
+.c-section section{
+    font-size: large;
+    border-radius: 5px;
+    font-family: sans-serif;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid rgb(128, 255, 0);
+    margin: 30px 0;
+    min-height: 300px;
+    transition: color 0.3s linear;       
+}
+.c-section section:hover{
+    color: rgb(217, 255, 0);
+    border-color: rgb(217, 255, 0);
+}
+.c-aside{
+    margin-right: 30px;
+}
+.c-aside-img img{
+    width: 400px;
+}
+.c-center {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
